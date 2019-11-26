@@ -1,0 +1,37 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+ion-card-header{
+  background-color: white;
+}
+
+ion-card-subtitle{
+  text-transform: none;
+  width: 50%;
+  display: inline-block;
+  border-top: 1px solid rgba(34,193,195,1);
+}
+
+img{
+  max-height: 300px;
+}
+
+.message{
+  font-size: 20px;
+  color: black;
+}
+
+.date{
+  text-align: right;
+}
+
+ion-title{
+  text-align: center;
+}
+
+ion-card-content{
+  background-color: white;
+  padding: 5px;
+}

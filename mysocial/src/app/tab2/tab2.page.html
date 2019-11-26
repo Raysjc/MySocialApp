@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title >
+      MESSAGE
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="messageBG">
+
+  <ion-card>
+    <ion-card-header>Create New Post</ion-card-header>
+
+  <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Your message:</ion-label>
+        <ion-input [(ngModel)]="model.message" name="message"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Image: Url</ion-label>
+        <ion-input [(ngModel)]="model.imageUrl" name="imageUrl"></ion-input>
+
+        <hr>
+        <ion-button class="firstChoice" color="secondary" (click)="chooseImage(0)">Chose Image</ion-button>
+        <ion-button class="secondChoice" color="secondary" (click)="chooseImage(1)">Take a picture</ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">To:</ion-label>
+        <ion-select [(ngModel)]="model.to" [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
+          <ion-select-option value="Everyone">Everyone</ion-select-option>
+          <ion-select-option *ngFor="let f of myFriends" [value]="f.name" >{{ f.name }}</ion-select-option>
+        </ion-select>
+        </ion-item>
+
+      <ion-button (click)="sendPost();" expand="block" size="medium" color="primary">Submit Post</ion-button>\
+  </ion-card-content>
+</ion-card>
+</ion-content>
